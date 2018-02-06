@@ -1,0 +1,90 @@
+<!doctype HTML>
+<html>
+<head>
+
+<title>Welcome</title>
+
+<link rel="stylesheet" href="website style.css">
+
+</head>
+
+
+<body>
+
+<script type="text/javascript" src="form2Javascript.js"></script>
+
+<img src="https://web.njit.edu/~kimmelma/njit_rgb_240x129.gif" alt="NJIT" align="left" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Geek_Squad_logo.svg" width="200" height="200" alt="Geek Squad" align="right" />
+<br>
+<br>
+<br>
+
+<div align="center">
+
+<img src="computer repair.jpg" width="293" height="300" alt="computer repair" />
+
+
+<h3 class="intro"> Computer not working? <br> Internet troubles? <br> </h3>
+
+<h2 class="intro">
+Got a problem? We can fix it.
+</h2>
+
+<br>
+
+<p class="intro">
+Sign in using your UCID to report an error.
+</p>
+<button class="button" onclick="displayform('myForm')">Open</button>
+
+
+<div align="center" id="myForm" style="display:none;">
+<form name="myForm" onsubmit="validateform('myForm')" action="scripts/form_authorize.php" method="post">
+	<p>UCID: <input type="text" placeholder="UCID" name="user" id="user" required /></p>
+	<p>Password: <input type="password" placeholder="Password" name="password" id="password" required /></p>
+	<br>
+	<input type="submit" class="button" value="Log In" />
+
+</form>
+<br>
+<div class="tooltip">Guest?
+	<span class="tooltext">UCID: test <br> Password: password123</span>
+</div>
+
+</div>
+
+
+
+<br>
+
+
+<p class="intro">
+Have you already submitted a ticket?
+</p>
+<button class="button" onclick="displayform('myForm2')">Open</button>
+
+
+
+<div align="center" id="myForm2" style="display:none;">
+<form name="myForm2" onsubmit="validateform('myForm2')" action="scripts/display_form_script.php" method="post">
+	<p>UCID: <input type="text" placeholder="UCID" name="ucid" id="ucid" required /></p>
+	<br>
+	<input type="submit" class="button" value="Log In" />
+
+</form>
+<br>
+<div class="tooltip">Guest?
+	<span class="tooltext">UCID: test</span>
+</div>
+
+</div>
+
+<br>
+<br>
+
+</div> <!-- Final div-->
+
+
+
+</body>
+</html>
